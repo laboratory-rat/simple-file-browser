@@ -1,0 +1,51 @@
+﻿body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+article{
+    margin: auto;
+    
+    width: 50%;
+    background-color:whitesmoke;
+    padding: 10px 50px 50px 50px;
+}
+
+article ol {
+    list-style:none;
+    background-color:snow;
+    padding: 5px;
+    font-size:larger;
+    min-height: 350px;
+}
+
+article a
+{
+    text-decoration:none;
+}
+
+article table{
+    background-color: grey;
+}
+
+article th{
+    padding: 5px;
+    text-align:center;
+    color:snow;
+}
+
+article td{
+    padding: 5px;
+    text-align: center;
+    background-color:snow;
+}
+
+#ResetButton{
+    width: 70px;
+    height: 20px;
+    background-color:grey;
+    color: snow;
+    margin-top: 20px;
+    text-align:center;
+    cursor:pointer;
+}

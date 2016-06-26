@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    
+    <title>Explorer-Timofeev_Oleg</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/Controllers/controller.js"></script>
+    <script src="Scripts/Factories/factory.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="Styles/Main.css" />
+</head>
+<body>
+
+        <article ng-controller="explorerController">
+            <table>
+                <tr>
+                    <th>Less 10mb</th>
+                    <th>10mb-50mb</th>
+                    <th>More 100mb</th>
+                </tr>
+                <tr>
+                    <td>{{data.FilesSizes[0]}}</td>
+                    <td>{{data.FilesSizes[1]}}</td>
+                    <td>{{data.FilesSizes[2]}}</td>
+                </tr>
+            </table>
+            <p><b>Current path:</b> {{data.Path}}</p>
+            <ol>
+                <li ng-repeat="dir in data.InnerDir" ng-switch="dir.IsFolder">
+                    <a href="#" ng-click="UpdateData(dir.Path)" ng-switch-when="true">{{dir.Name}}</a>
+                    <a ng-switch-when="false">{{dir.Name}}</a>
+                </li>
+            </ol>
+            <div ng-click="UpdateData('')" id="ResetButton">Root</div>
+        </article>
+</body>
+</html>
